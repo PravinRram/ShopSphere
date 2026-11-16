@@ -1,0 +1,10 @@
+* text=auto
+*.py text eol=lf
+*.ipynb text eol=lf
+*.md text eol=lf
+*.csv text eol=lf
+*.png binary
+*.jpg binary
+*.zip binary
+*.pt binary
+*.db binary
