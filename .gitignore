@@ -1,0 +1,37 @@
+# Data: never committed
+data/*
+!data/README.md
+*.db
+*.sqlite
+*.sqlite3
+# Model weights and checkpoints: shared on GitHub Releases
+models/*/weights/*
+!models/*/weights/README.md
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.joblib
+*.pkl
+*.zip
+# Experiment tracking
+mlruns/
+lightning_logs/
+catboost_info/
+wandb/
+# Secrets
+.env
+*.key
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.ipynb_checkpoints/
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
