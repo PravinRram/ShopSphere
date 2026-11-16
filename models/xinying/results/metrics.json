@@ -1,0 +1,9 @@
+{
+    "PyTorch_Tabular_DL": {
+        "ROC_AUC": 0.8728,
+        "PR_AUC": 0.5702,
+        "Brier_Score": 0.1544,
+        "Best_F1": 0.5427,
+        "Optimal_Threshold": 0.7
+    }
+}
