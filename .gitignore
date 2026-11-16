@@ -1,0 +1,32 @@
+# Data & Database files (> 100MB)
+*.db
+*.sqlite
+*.sqlite3
+*.zip
+*.tar.gz
+shopsphere.db
+
+# Raw data folders
+ShopSphere_DataPack_Part1_sessions/
+ShopSphere_DataPack_Part2_other_tables/
+cleaned_data_master/
+cleaned_data_person_d/
+
+# Temporary text dumps
+brief_dump.txt
+guidebook_dump.txt
+
+# Python cache & checkpoints
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+*.egg-info/
+.env
+.venv/
+env/
+venv/
+
+# Large matrix in task_outputs if over git limits
+task_outputs/model_feature_matrix.csv
+task_outputs/agent_customer_decisions.csv

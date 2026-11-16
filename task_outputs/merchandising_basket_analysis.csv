@@ -1,0 +1,9 @@
+category,total_orders_containing_category,total_units_sold,gross_revenue_usd,avg_margin_pct,promotable_units_sold,low_margin_non_promotable_units
+Electronics,48230,81650,16199902.82,32.69,71898,9752
+Home & Living,47909,80688,5465773.18,39.34,72885,7803
+Sports & Outdoors,47355,79891,5217787.92,34.51,70453,9438
+Fashion,48792,82454,4151314.2,33.51,72713,9741
+Toys & Kids,48060,81136,2901945.87,33.43,77808,3328
+Beauty,48794,82636,2596086.27,32.76,74411,8225
+Books & Media,46834,78811,1476426.69,32.17,63188,15623
+Groceries,48417,81687,1046323.52,32.27,72074,9613
