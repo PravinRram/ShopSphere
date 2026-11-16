@@ -1,8 +1,0 @@
-carrier,total_shipments,late_shipments,late_rate_pct,lost_parcels,returned_parcels,avg_delay_days_when_late,related_complaint_tickets,avg_carrier_csat
-GlobalExpress,114997,6760,5.88,668,3573,1.98,5175,3.64
-ParcelNow,70816,11505,16.25,391,2253,3.03,6101,3.71
-SwiftPost,39445,2723,6.9,194,1228,2.13,1919,3.65
-DeutschLog,30553,1406,4.6,181,956,1.8,1232,3.6
-RoyalLine,20928,1731,8.27,121,640,2.28,1156,3.71
-ColisFast,14586,1271,8.71,91,442,2.33,823,3.63
-BharatShip,9918,1403,14.15,52,308,2.9,736,3.75
