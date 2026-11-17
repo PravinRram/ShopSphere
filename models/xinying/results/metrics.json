@@ -1,9 +1,24 @@
 {
-    "PyTorch_Tabular_DL": {
-        "ROC_AUC": 0.8728,
-        "PR_AUC": 0.5702,
-        "Brier_Score": 0.1544,
-        "Best_F1": 0.5427,
-        "Optimal_Threshold": 0.7
+    "PyTorch_Tabular_DL_80_20": {
+        "Split": "80/20 Stratified Holdout",
+        "Seed": 42,
+        "ROC_AUC": 0.8740,
+        "PR_AUC": 0.5728,
+        "Best_F1": 0.5451,
+        "Recall": 0.6097,
+        "Precision": 0.4928,
+        "Accuracy": 0.8541,
+        "Optimal_Threshold": 0.70
+    },
+    "LightGBM_Baseline_80_20": {
+        "Split": "80/20 Stratified Holdout",
+        "Seed": 42,
+        "ROC_AUC": 0.8752,
+        "PR_AUC": 0.5725,
+        "Best_F1": 0.5486,
+        "Recall": 0.6649,
+        "Precision": 0.4669,
+        "Accuracy": 0.8534,
+        "Optimal_Threshold": 0.64
     }
 }
