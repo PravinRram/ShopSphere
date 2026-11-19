@@ -1,0 +1,18 @@
+# ShopSphere TabNet repurchase model (03_tabnet_training_pipeline.ipynb)
+# Tested with Python 3.13.3 on Windows (CPU only).
+# Install: pip install -r requirements.txt
+#
+# PyTorch: this installs the default build from PyPI. For a smaller CPU-only build use:
+#   pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
+torch==2.15.0
+pytorch-tabnet==4.1.0
+lightgbm==4.7.0
+scikit-learn==1.9.1
+pandas==3.1.0
+numpy==2.5.4
+scipy==1.18.1
+matplotlib==3.11.2
+seaborn==0.13.2
+pyarrow==26.0.1
+joblib==1.6.0
+ipykernel==7.4.0
