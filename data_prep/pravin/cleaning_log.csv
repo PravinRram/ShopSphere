@@ -1,0 +1,15 @@
+file,column,issue,action,rows_affected,note
+customers,country_code,15 inconsistent spellings of 5 countries,standardised in place to US/UK/DE/FR/IN,54721,
+customers,age,text value 'unknown',"set to NaN, added age_is_missing",4119,
+customers,age,pile-up at 18 (about 6x the count at ages 19 and 20),"kept as-is, no flag (documented in section 3.3b)",5125,
+customers,signup_date,"pile-up on 2022-01-01, the first day of history (probably left-censored)","kept as-is, no flag (EDA computes signup_before_history_flag on the fly)",14122,
+customers,email_open_rate,blank values,"left as NaN, added email_open_rate_is_missing (impute in the pipeline)",14559,
+customers,avg_review_score,values above 5 on a 1-5 scale (max 6.5),capped to 5.0 (scale maximum); no flag,313,"Alternative considered: set to missing plus a flag. Rejected because the raw data already piles up at exactly 5.0, so values above 5 look like clipped top scores, and median imputation would probably understate them (section 6.4b). Trade-off: the capped rows can no longer be identified in the cleaned file."
+customers,credit_limit,numbers stored as text with $ and commas,converted to float,80000,
+customers,referral_code,code shared by 2+ customers (about what random 6-digit codes give by chance),"kept as-is, no flag (identifier, not a model feature)",6900,
+customers,noise_customer_0-4,system fields with no business meaning,dropped from the saved file after confirming no signal (section 6.6),80000,
+preferences,email_opt_in / sms_opt_in / do_not_contact,Y/N text,converted to 1/0,80000,
+preferences,last_updated,pile-up on the cutoff date 2024-09-30 (probably clipped),"kept as-is, no flag (EDA computes pref_updated_on_cutoff_flag on the fly)",14005,
+preferences,preferred_channel,"preferred email/sms channel without matching opt-in (consent risk, W4)","kept as-is, no flag (EDA computes channel_consent_conflict_flag on the fly)",20595,
+train,customer_id/target,none found (validated),cast to int,64000,
+test,customer_id,none found (validated),cast to int,16000,
