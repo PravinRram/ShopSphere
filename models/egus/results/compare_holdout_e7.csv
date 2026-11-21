@@ -1,0 +1,15 @@
+against,model,ROC-AUC,PR-AUC,ROC change,PR change,team rule sum
+Team baseline 02 (team-reported),E7 (5 seeds),0.8771,0.5784,0.0019,0.0059,0.0078
+Team baseline 02 (team-reported),E7 seed 1,0.8761,0.5757,0.0009,0.0032,0.0041
+Team baseline 02 (team-reported),"E4T (5 seeds, same count)",0.8747,0.5776,-0.0005,0.0051,0.0046
+Team baseline 02 (team-reported),E4T (5 seeds),0.8747,0.5776,-0.0005,0.0051,0.0046
+Team baseline 02 (team-reported),E4T seed 1,0.8729,0.5748,-0.0023,0.0023,-0.0
+Team baseline 02 (team-reported),Own baseline 03 (LightGBM),0.8762,0.5761,0.001,0.0036,0.0046
+Team baseline 02 (team-reported),Xin Ying TabularNN (as reported),0.874,0.5728,-0.0012,0.0003,-0.0009
+Team baseline 02 (our rerun of the notebook),E7 (5 seeds),0.8771,0.5784,0.0037,0.0245,0.0282
+Team baseline 02 (our rerun of the notebook),E7 seed 1,0.8761,0.5757,0.0027,0.0217,0.0244
+Team baseline 02 (our rerun of the notebook),"E4T (5 seeds, same count)",0.8747,0.5776,0.0013,0.0237,0.0249
+Team baseline 02 (our rerun of the notebook),E4T (5 seeds),0.8747,0.5776,0.0013,0.0237,0.0249
+Team baseline 02 (our rerun of the notebook),E4T seed 1,0.8729,0.5748,-0.0006,0.0209,0.0203
+Team baseline 02 (our rerun of the notebook),Own baseline 03 (LightGBM),0.8762,0.5761,0.0027,0.0222,0.0249
+Team baseline 02 (our rerun of the notebook),Xin Ying TabularNN (as reported),0.874,0.5728,0.0006,0.0189,0.0194

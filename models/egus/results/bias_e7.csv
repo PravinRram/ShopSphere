@@ -1,0 +1,10 @@
+group,value,customers,actual_rate,mean_prediction,recall_plain,recall_age_fair
+age_band,25-34,14907,0.1623,0.1667,0.466,0.432
+age_band,35-44,18026,0.1395,0.1434,0.424,0.436
+age_band,45-54,12452,0.1243,0.1304,0.391,0.439
+age_band,55+,6183,0.1145,0.1122,0.333,0.419
+age_band,<25,9090,0.1784,0.1848,0.514,0.442
+age_band,nan,3342,0.1541,0.1561,0.4,0.408
+region_tier,Tier1,27964,0.1493,0.151,0.443,0.441
+region_tier,Tier2,20036,0.1444,0.1486,0.431,0.428
+region_tier,Tier3,16000,0.1411,0.1493,0.434,0.427
