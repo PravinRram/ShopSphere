@@ -122,7 +122,7 @@ for −0.005 precision (`results/bias_e7.csv`).
   `target` = 1 where the probability is at least 0.26).
 - `results/compare_*`, `bootstrap_*`, `bias_e7.csv`, `confusion_matrix_e7_seed1.png`.
 - Weights (25 models, preprocessors and temperatures): GitHub Release `egus-e7-v1`, file `e7_v1.zip`.
-  Link: <add after publishing the release>
+  Link: https://github.com/PravinRram/ShopSphere/releases/tag/egus-e7-v1
 
 ## 6. Inputs and output
 ![Inputs and output](../../docs/slides/egus_pr1_model_inputs_outputs.png)
