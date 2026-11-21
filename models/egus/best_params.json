@@ -1,0 +1,21 @@
+{
+ "params": {
+  "hidden": 128,
+  "gru_layers": 1,
+  "dropout": 0.012017073631314018,
+  "lr": 0.0011793633128714279,
+  "n_events": 128,
+  "max_epochs": 30
+ },
+ "valid_pr_auc_fold": 0.584194663722336,
+ "trial": 23,
+ "starting_settings_pr_auc_fold": 0.5820156378982962,
+ "fold": 0,
+ "seed": 1,
+ "run": "E4",
+ "trials": {
+  "COMPLETE": 15,
+  "PRUNED": 15,
+  "FAIL": 0
+ }
+}

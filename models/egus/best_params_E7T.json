@@ -1,0 +1,24 @@
+{
+ "params": {
+  "hidden": 128,
+  "gru_layers": 1,
+  "dropout": 0.12262354304143575,
+  "lr": 0.00032229106229024945,
+  "n_events": 128,
+  "max_epochs": 30
+ },
+ "valid_pr_auc_fold": 0.5873310972894076,
+ "trial": 18,
+ "starting_settings_pr_auc_fold": 0.5850578815869314,
+ "fold": 0,
+ "seed": 1,
+ "run": "E4",
+ "extra": "crm,geo",
+ "tag": "E7T",
+ "space": "wide",
+ "trials": {
+  "COMPLETE": 14,
+  "PRUNED": 16,
+  "FAIL": 0
+ }
+}
