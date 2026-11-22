@@ -1,0 +1,13 @@
+{
+    "LightGBM_Baseline_80_20": {
+        "Split": "80/20 Stratified Holdout",
+        "Seed": 42,
+        "ROC_AUC": 0.8752,
+        "PR_AUC": 0.5725,
+        "Best_F1": 0.5486,
+        "Recall": 0.6649,
+        "Precision": 0.4669,
+        "Accuracy": 0.8534,
+        "Optimal_Threshold": 0.64
+    }
+}
