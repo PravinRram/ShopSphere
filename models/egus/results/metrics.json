@@ -1,0 +1,25 @@
+{
+    "E7_GRU_MLP_seed1": {
+        "Split": "Team 80/20 holdout ids (12,800, holdout_8020_ids.csv); each customer scored out of fold by a model that never saw them",
+        "Seed": 1,
+        "ROC_AUC": 0.8761,
+        "PR_AUC": 0.5757,
+        "Best_F1": 0.5459,
+        "Recall": 0.5818,
+        "Precision": 0.5142,
+        "Accuracy": 0.859,
+        "Optimal_Threshold": 0.32
+    },
+    "E7_GRU_MLP_5seeds": {
+        "Split": "Team 80/20 holdout ids (12,800, holdout_8020_ids.csv); each customer scored out of fold by a model that never saw them",
+        "Seed": "1-5 (mean)",
+        "ROC_AUC": 0.8771,
+        "PR_AUC": 0.5784,
+        "Best_F1": 0.5477,
+        "Recall": 0.6788,
+        "Precision": 0.459,
+        "Accuracy": 0.8366,
+        "Optimal_Threshold": 0.26
+    },
+    "Threshold_rule": "best F1 over np.arange(0.2, 0.8, 0.01), as in the 02 notebook"
+}

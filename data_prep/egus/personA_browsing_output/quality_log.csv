@@ -1,0 +1,11 @@
+#,table,issue,rows,action
+1,sessions,bounce_flag in 6 encodings,1442550,mapped to bool
+2,sessions,traffic_source case variants,10,"15 spellings -> 5: ['ads', 'direct', 'email', 'organic', 'social']"
+3,sessions,device_type case variants,6,"9 spellings -> 3: ['desktop', 'mobile', 'tablet']"
+4,sessions,pages_viewed null on bounced sessions,349,set to 1 (a bounce is 1 page by definition)
+5,sessions,pages_viewed null otherwise,71609,flagged; imputation deferred to pipeline
+6,sessions,cart_additions > pages_viewed,144,"kept: tail of the count, several items can be added from one page (revised; was capped)"
+7,sessions,session_duration in corrupted cluster (>5h),1484,"nulled, flagged: normal activity over hours, uncorrelated with pages, separated by a gap"
+8,sessions,session_duration 1h-5h (natural tail),560,kept; transform in pipeline
+9,sessions,campaign_id blank,1342149,"documented meaning: not from a campaign. Flag, not fill"
+10,campaign_daily,total spend exceeds marketing_campaigns.campaign_budget,94,"kept; budget is a plan, spend is actual"

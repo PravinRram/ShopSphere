@@ -1,0 +1,488 @@
+{
+  "rows": {
+    "customers": 80000,
+    "preferences": 80000,
+    "train": 64000,
+    "test": 16000
+  },
+  "key_checks": {
+    "customers: duplicate customer_id": 0,
+    "customers: fully duplicated rows": 0,
+    "preferences: duplicate customer_id": 0,
+    "train: duplicate customer_id": 0,
+    "test: duplicate customer_id": 0,
+    "train \u2229 test customer_ids (should be 0)": 0,
+    "train ids missing from customers": 0,
+    "test ids missing from customers": 0,
+    "preferences ids missing from customers": 0,
+    "customers without a preferences row": 0,
+    "customers in neither train nor test": 0,
+    "train targets not in {0,1}": 0
+  },
+  "raw_country_spellings": {
+    "U.S.": 8094,
+    "USA": 8007,
+    "usa": 7967,
+    "US": 7888,
+    "UK": 5391,
+    "GB": 5346,
+    "uk": 5338,
+    "DE": 5286,
+    "de": 5278,
+    "Germany": 5258,
+    "fr": 4105,
+    "FR": 3991,
+    "IN": 2723,
+    "India": 2680,
+    "in": 2648
+  },
+  "email_open_rate_blank": 14559,
+  "age_unknown": 4119,
+  "avg_review_gt5": 313,
+  "avg_review_eq5": 5379,
+  "avg_review_max": 6.5,
+  "signup_on_history_start": 14122,
+  "pref_updated_on_cutoff": 14005,
+  "age_eq_18": 5125,
+  "age_eq_19": 823,
+  "dur_eq_0": 16799,
+  "dur_eq_1": 6044,
+  "channel_conflict": 20595,
+  "channel_conflict_email": 12792,
+  "channel_conflict_sms": 7803,
+  "dnc_yes": 1634,
+  "country_counts": {
+    "US": 31956,
+    "UK": 16075,
+    "DE": 15822,
+    "FR": 8096,
+    "IN": 8051
+  },
+  "remaining_missing": {
+    "age": 4119,
+    "email_open_rate": 14559
+  },
+  "train_rows": 64000,
+  "base_rate": 0.14571875,
+  "n_pos": 9326,
+  "n_neg": 54674,
+  "univariate": [
+    {
+      "feature": "loyalty_score",
+      "n_used": 64000,
+      "single_feature_AUC": 0.795,
+      "spearman_vs_target": 0.36
+    },
+    {
+      "feature": "email_open_rate",
+      "n_used": 52383,
+      "single_feature_AUC": 0.591,
+      "spearman_vs_target": 0.113
+    },
+    {
+      "feature": "discount_usage_rate",
+      "n_used": 64000,
+      "single_feature_AUC": 0.581,
+      "spearman_vs_target": 0.099
+    },
+    {
+      "feature": "avg_review_score",
+      "n_used": 64000,
+      "single_feature_AUC": 0.434,
+      "spearman_vs_target": -0.081
+    },
+    {
+      "feature": "age",
+      "n_used": 60658,
+      "single_feature_AUC": 0.451,
+      "spearman_vs_target": -0.06
+    },
+    {
+      "feature": "tenure_days",
+      "n_used": 64000,
+      "single_feature_AUC": 0.456,
+      "spearman_vs_target": -0.054
+    },
+    {
+      "feature": "days_since_pref_update",
+      "n_used": 64000,
+      "single_feature_AUC": 0.458,
+      "spearman_vs_target": -0.052
+    },
+    {
+      "feature": "credit_limit",
+      "n_used": 64000,
+      "single_feature_AUC": 0.502,
+      "spearman_vs_target": 0.003
+    }
+  ],
+  "max_feature_feature_corr": 0.9395792436977486,
+  "second_feature_corr": 0.22104255585881338,
+  "cramers": [
+    {
+      "feature": "customer_tier",
+      "cramers_v": 0.411,
+      "p_value": "0.0e+00"
+    },
+    {
+      "feature": "email_opt_in",
+      "cramers_v": 0.108,
+      "p_value": "1.0e-164"
+    },
+    {
+      "feature": "channel_consent_conflict_flag",
+      "cramers_v": 0.055,
+      "p_value": "2.4e-43"
+    },
+    {
+      "feature": "email_open_rate_is_missing",
+      "cramers_v": 0.037,
+      "p_value": "3.2e-21"
+    },
+    {
+      "feature": "signup_before_history_flag",
+      "cramers_v": 0.036,
+      "p_value": "2.9e-20"
+    },
+    {
+      "feature": "pref_updated_on_cutoff_flag",
+      "cramers_v": 0.028,
+      "p_value": "1.0e-12"
+    },
+    {
+      "feature": "country_code",
+      "cramers_v": 0.012,
+      "p_value": "6.1e-02"
+    },
+    {
+      "feature": "preferred_language",
+      "cramers_v": 0.011,
+      "p_value": "4.3e-02"
+    },
+    {
+      "feature": "do_not_contact",
+      "cramers_v": 0.007,
+      "p_value": "7.6e-02"
+    },
+    {
+      "feature": "preferred_channel",
+      "cramers_v": 0.006,
+      "p_value": "4.8e-01"
+    },
+    {
+      "feature": "avg_review_was_capped",
+      "cramers_v": 0.006,
+      "p_value": "1.4e-01"
+    },
+    {
+      "feature": "age_is_missing",
+      "cramers_v": 0.005,
+      "p_value": "1.7e-01"
+    },
+    {
+      "feature": "referral_code_shared_flag",
+      "cramers_v": 0.004,
+      "p_value": "2.8e-01"
+    },
+    {
+      "feature": "sms_opt_in",
+      "cramers_v": 0.001,
+      "p_value": "8.2e-01"
+    }
+  ],
+  "cap_n_train": 237,
+  "cap_rate": 0.10970464135021098,
+  "eq5_n_train": 4296,
+  "eq5_rate": 0.11708566108007448,
+  "cap_vs_eq5_p": 0.7304396139864662,
+  "cap_raw_mean": 5.79645569620253,
+  "cap_margin": 0.039788856126829655,
+  "region_chi_p": 1.061941757450039e-21,
+  "region_v": 0.06815465910078589,
+  "region_sd_obs": 0.025052443337705888,
+  "region_sd_exp": 0.013946594336658272,
+  "region_rate_min": 0.07974137931034483,
+  "region_rate_max": 0.21957913998170173,
+  "loyalty_decile_low": 0.008658008658008658,
+  "loyalty_decile_high": 0.4825043150792405,
+  "noise": [
+    {
+      "feature": "noise_customer_0",
+      "mean": -0.002,
+      "std": 0.998,
+      "spearman_vs_target": 0.0002,
+      "single_feature_AUC": 0.5,
+      "mannwhitney_p": 0.968
+    },
+    {
+      "feature": "noise_customer_1",
+      "mean": 0.007,
+      "std": 0.999,
+      "spearman_vs_target": -0.0014,
+      "single_feature_AUC": 0.499,
+      "mannwhitney_p": 0.724
+    },
+    {
+      "feature": "noise_customer_2",
+      "mean": -0.003,
+      "std": 1.002,
+      "spearman_vs_target": 0.0029,
+      "single_feature_AUC": 0.502,
+      "mannwhitney_p": 0.463
+    },
+    {
+      "feature": "noise_customer_3",
+      "mean": 0.006,
+      "std": 1.005,
+      "spearman_vs_target": 0.0098,
+      "single_feature_AUC": 0.508,
+      "mannwhitney_p": 0.013
+    },
+    {
+      "feature": "noise_customer_4",
+      "mean": -0.003,
+      "std": 0.999,
+      "spearman_vs_target": -0.004,
+      "single_feature_AUC": 0.497,
+      "mannwhitney_p": 0.309
+    }
+  ],
+  "id_auc": 0.4972781702892291,
+  "shift": [
+    {
+      "feature": "age",
+      "type": "numeric",
+      "effect_size": 0.0072,
+      "p_value": 0.543
+    },
+    {
+      "feature": "tenure_days",
+      "type": "numeric",
+      "effect_size": 0.0047,
+      "p_value": 0.935
+    },
+    {
+      "feature": "loyalty_score",
+      "type": "numeric",
+      "effect_size": 0.0037,
+      "p_value": 0.994
+    },
+    {
+      "feature": "email_open_rate",
+      "type": "numeric",
+      "effect_size": 0.0085,
+      "p_value": 0.43
+    },
+    {
+      "feature": "discount_usage_rate",
+      "type": "numeric",
+      "effect_size": 0.0059,
+      "p_value": 0.767
+    },
+    {
+      "feature": "avg_review_score",
+      "type": "numeric",
+      "effect_size": 0.006,
+      "p_value": 0.747
+    },
+    {
+      "feature": "credit_limit",
+      "type": "numeric",
+      "effect_size": 0.0122,
+      "p_value": 0.043
+    },
+    {
+      "feature": "days_since_pref_update",
+      "type": "numeric",
+      "effect_size": 0.0073,
+      "p_value": 0.498
+    },
+    {
+      "feature": "customer_tier",
+      "type": "categorical",
+      "effect_size": 0.0104,
+      "p_value": 0.035
+    },
+    {
+      "feature": "country_code",
+      "type": "categorical",
+      "effect_size": 0.0028,
+      "p_value": 0.958
+    },
+    {
+      "feature": "preferred_channel",
+      "type": "categorical",
+      "effect_size": 0.0063,
+      "p_value": 0.372
+    },
+    {
+      "feature": "preferred_language",
+      "type": "categorical",
+      "effect_size": 0.0032,
+      "p_value": 0.842
+    },
+    {
+      "feature": "email_opt_in",
+      "type": "categorical",
+      "effect_size": 0.0033,
+      "p_value": 0.35
+    },
+    {
+      "feature": "email_open_rate_is_missing",
+      "type": "categorical",
+      "effect_size": 0.0024,
+      "p_value": 0.496
+    },
+    {
+      "feature": "signup_before_history_flag",
+      "type": "categorical",
+      "effect_size": 0.0043,
+      "p_value": 0.229
+    },
+    {
+      "feature": "channel_consent_conflict_flag",
+      "type": "categorical",
+      "effect_size": 0.0028,
+      "p_value": 0.425
+    }
+  ],
+  "cleaning_log": [
+    {
+      "file": "customers",
+      "column": "country_code",
+      "issue": "15 inconsistent spellings of 5 countries",
+      "action": "standardised in place to US/UK/DE/FR/IN",
+      "rows_affected": 54721,
+      "note": ""
+    },
+    {
+      "file": "customers",
+      "column": "age",
+      "issue": "text value 'unknown'",
+      "action": "set to NaN, added age_is_missing",
+      "rows_affected": 4119,
+      "note": ""
+    },
+    {
+      "file": "customers",
+      "column": "age",
+      "issue": "pile-up at 18 (about 6x the count at ages 19 and 20)",
+      "action": "kept as-is, no flag (documented in section 3.3b)",
+      "rows_affected": 5125,
+      "note": ""
+    },
+    {
+      "file": "customers",
+      "column": "signup_date",
+      "issue": "pile-up on 2022-01-01, the first day of history (probably left-censored)",
+      "action": "kept as-is, no flag (EDA computes signup_before_history_flag on the fly)",
+      "rows_affected": 14122,
+      "note": ""
+    },
+    {
+      "file": "customers",
+      "column": "email_open_rate",
+      "issue": "blank values",
+      "action": "left as NaN, added email_open_rate_is_missing (impute in the pipeline)",
+      "rows_affected": 14559,
+      "note": ""
+    },
+    {
+      "file": "customers",
+      "column": "avg_review_score",
+      "issue": "values above 5 on a 1-5 scale (max 6.5)",
+      "action": "capped to 5.0 (scale maximum); no flag",
+      "rows_affected": 313,
+      "note": "Alternative considered: set to missing plus a flag. Rejected because the raw data already piles up at exactly 5.0, so values above 5 look like clipped top scores, and median imputation would probably understate them (section 6.4b). Trade-off: the capped rows can no longer be identified in the cleaned file."
+    },
+    {
+      "file": "customers",
+      "column": "credit_limit",
+      "issue": "numbers stored as text with $ and commas",
+      "action": "converted to float",
+      "rows_affected": 80000,
+      "note": ""
+    },
+    {
+      "file": "customers",
+      "column": "referral_code",
+      "issue": "code shared by 2+ customers (about what random 6-digit codes give by chance)",
+      "action": "kept as-is, no flag (identifier, not a model feature)",
+      "rows_affected": 6900,
+      "note": ""
+    },
+    {
+      "file": "customers",
+      "column": "noise_customer_0-4",
+      "issue": "system fields with no business meaning",
+      "action": "dropped from the saved file after confirming no signal (section 6.6)",
+      "rows_affected": 80000,
+      "note": ""
+    },
+    {
+      "file": "preferences",
+      "column": "email_opt_in / sms_opt_in / do_not_contact",
+      "issue": "Y/N text",
+      "action": "converted to 1/0",
+      "rows_affected": 80000,
+      "note": ""
+    },
+    {
+      "file": "preferences",
+      "column": "last_updated",
+      "issue": "pile-up on the cutoff date 2024-09-30 (probably clipped)",
+      "action": "kept as-is, no flag (EDA computes pref_updated_on_cutoff_flag on the fly)",
+      "rows_affected": 14005,
+      "note": ""
+    },
+    {
+      "file": "preferences",
+      "column": "preferred_channel",
+      "issue": "preferred email/sms channel without matching opt-in (consent risk, W4)",
+      "action": "kept as-is, no flag (EDA computes channel_consent_conflict_flag on the fly)",
+      "rows_affected": 20595,
+      "note": ""
+    },
+    {
+      "file": "train",
+      "column": "customer_id/target",
+      "issue": "none found (validated)",
+      "action": "cast to int",
+      "rows_affected": 64000,
+      "note": ""
+    },
+    {
+      "file": "test",
+      "column": "customer_id",
+      "issue": "none found (validated)",
+      "action": "cast to int",
+      "rows_affected": 16000,
+      "note": ""
+    }
+  ],
+  "customers_clean_cols": [
+    "customer_id",
+    "age",
+    "country_code",
+    "region",
+    "signup_date",
+    "loyalty_score",
+    "email_open_rate",
+    "discount_usage_rate",
+    "avg_review_score",
+    "referral_code",
+    "customer_tier",
+    "credit_limit",
+    "age_is_missing",
+    "email_open_rate_is_missing"
+  ],
+  "prefs_clean_cols": [
+    "customer_id",
+    "email_opt_in",
+    "sms_opt_in",
+    "preferred_channel",
+    "preferred_language",
+    "do_not_contact",
+    "last_updated"
+  ]
+}
