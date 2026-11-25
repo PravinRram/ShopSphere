@@ -148,6 +148,9 @@ ranked list: the top 6,709 each week, shared fairly by age, go to the Targeting 
 | `fairness.py` | Equal-opportunity allocation for the contact list |
 
 ## 8. Notes
-- `shopsphere.db` caps sessions over 5 h at 4 h. The browsing cleaning (`data_prep/egus/personA_browsing.ipynb`)
-  blanks them instead; adopting that rule needs a rebuild of the database and a retrain (planned for PR2).
+- `shopsphere.db` stores **both** `session_duration` (raw, max 89,948 s) and `session_duration_capped`,
+  which caps the 1,484 sessions over 5 h at 4 h. `cutoff_rules.load_tables` selects the capped column, so
+  E7 trains on capped durations. The browsing cleaning (`data_prep/egus/personA_browsing.ipynb`) blanks
+  those sessions instead. Adopting that rule needs a change to the feature code and a retrain — **not** a
+  database rebuild, since the raw column is already in the table (planned for PR2).
 - Code written with Claude (claude.ai). See `docs/ai_use_logs/egus.md`.
