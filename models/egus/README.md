@@ -8,8 +8,8 @@
 | What | Where |
 |---|---|
 | Model card (this page) | `models/egus/README.md` |
-| Data cleaning and EDA, browsing tables (my allocated part, "Person A") | [`data_prep/personA_browsing.ipynb`](../../data_prep/personA_browsing.ipynb) |
-| What the cleaned browsing data contains, and every fix made | [`data_prep/personA_browsing_output/`](../../data_prep/personA_browsing_output/): the cleaned files (`sessions.csv.gz`, `geo_data.csv`, `campaign_daily_performance.csv`), data dictionary and `quality_log.csv` |
+| Data cleaning and EDA, browsing tables (my allocated part, "Person A") | [`data_prep/egus/personA_browsing.ipynb`](../../data_prep/egus/personA_browsing.ipynb) |
+| What the cleaned browsing data contains, and every fix made | [`data_prep/egus/personA_browsing_output/`](../../data_prep/egus/personA_browsing_output/): the cleaned files (`sessions.csv.gz`, `geo_data.csv`, `campaign_daily_performance.csv`), data dictionary and `quality_log.csv` |
 | My own baseline: LightGBM (03), and how E7 compares with it | [`baseline_03/README.md`](baseline_03/README.md) |
 | Training code (Python package) | [`src/shopsphere_dl/`](src/shopsphere_dl/), code map in section 7 |
 | Training and tuning runs (Kaggle, GPU) | [`notebooks/kaggle_e7_train.ipynb`](notebooks/kaggle_e7_train.ipynb), [`notebooks/kaggle_e7t_tune.ipynb`](notebooks/kaggle_e7t_tune.ipynb) |
@@ -19,7 +19,7 @@
 | Test-set predictions | [`results/test_E7.csv`](results/test_E7.csv) |
 | Tests | [`tests/`](tests/) (51 passed, 3 skipped) |
 | Trained weights | GitHub Release `egus-e7-v1` (link in section 5) |
-| PR1 slides and charts | [`docs/slides/`](../../docs/slides/), files starting `egus_` |
+| PR1 slides and charts | [`docs/slides/egus/`](../../docs/slides/egus/) |
 | AI Use Log | [`docs/ai_use_logs/egus.md`](../../docs/ai_use_logs/egus.md) |
 
 **PR1 rubric → evidence**
@@ -125,7 +125,7 @@ for −0.005 precision (`results/bias_e7.csv`).
   Link: https://github.com/PravinRram/ShopSphere/releases/tag/egus-e7-v1
 
 ## 6. Inputs and output
-![Inputs and output](../../docs/slides/egus_pr1_model_inputs_outputs.png)
+![Inputs and output](../../docs/slides/egus/egus_pr1_model_inputs_outputs.png)
 
 The output is a **binary classification**: will the customer buy between 1 and 30 Oct 2024? The model
 gives a calibrated probability (0 to 1). It is used as a yes/no answer (probability ≥ 0.32, seed 1) and as a
@@ -148,6 +148,6 @@ ranked list: the top 6,709 each week, shared fairly by age, go to the Targeting 
 | `fairness.py` | Equal-opportunity allocation for the contact list |
 
 ## 8. Notes
-- `shopsphere.db` caps sessions over 5 h at 4 h. The browsing cleaning (`data_prep/personA_browsing.ipynb`)
+- `shopsphere.db` caps sessions over 5 h at 4 h. The browsing cleaning (`data_prep/egus/personA_browsing.ipynb`)
   blanks them instead; adopting that rule needs a rebuild of the database and a retrain (planned for PR2).
 - Code written with Claude (claude.ai). See `docs/ai_use_logs/egus.md`.
